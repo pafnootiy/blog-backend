@@ -112,7 +112,8 @@
                 <img class="img-fluid" src="static/css/img/banner/blog.png" alt="">
               {% endif %}
               {% if post.text %}
-                <p>{{post.text}}</p>
+                <p>{{post.text|truncatechars:200}} </p>
+           
               {% else %}
                 <img class="img-fluid" src="static/css/img/banner/blog.png" alt="">
               {% endif %}
