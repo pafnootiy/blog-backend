@@ -99,7 +99,7 @@
               {% else %}
                 <img class="img-fluid" src="static/css/img/banner/blog.png" alt="">
               {% endif %}
-              <ul class="thumb-info">
+              <ul class="thumb-info" style= "max-width: 550px;">
                 <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
                 <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
                 <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a></li>
@@ -113,7 +113,7 @@
               {% endif %}
               {% if post.text %}
                 <p>{{post.text|truncatechars:200}} </p>
-           
+
               {% else %}
                 <img class="img-fluid" src="static/css/img/banner/blog.png" alt="">
               {% endif %}
