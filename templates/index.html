@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
 <html lang="en">
 <head>
@@ -12,9 +13,7 @@
 </head>
 
 <body>
-<!--{% for post in fresh_posts %}-->
-<!--{{post}}<br>-->
-<!--{% endfor %}-->
+{% block content %}
 <!--================Header Menu Area =================-->
 <header class="header_area">
   <div class="main_menu">
@@ -117,7 +116,8 @@
               {% else %}
               <img class="img-fluid" src="{%static 'css/img/banner/blog.png' %}" alt="">
               {% endif %}
-              
+
+
               <a class="button" href="{% url 'index' %}post/{{post.slug}}"> Read More <i class="ti-arrow-right"></i></a><br>
 
             </div>
@@ -258,4 +258,6 @@
 
 <script src="{% static 'css/js/scripts.js' %}"></script>
 </body>
+{% endblock %}
+
 </html>
