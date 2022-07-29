@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Remake Barber - Blog Details</title>
-  <link rel="icon" href="{% static '/css/img/favicon.png' %}" type="image/png">
 
-  <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
-</head>
+{% block title %}
+{{post.title}} - Blog Details
+{% endblock %}
 
-<body>
+
 {% block content %}
 <!--================Header Menu Area =================-->
 <header class="header_area">
@@ -28,12 +22,13 @@
           <span class="icon-bar"></span>
         </button>
 
-<
+        <
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
           <ul class="nav navbar-nav menu_nav justify-content-center">
             <li class="nav-item"><a class="nav-link" style="color: #3a414e;" href="{% url 'index' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" style="color: #3a414e;" href="{% url 'index' %}contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" style="color: #3a414e;" href="{% url 'index' %}contact">Contact</a>
+            </li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-social">
