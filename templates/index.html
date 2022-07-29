@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-   Sensive Blog - Home
+Sensive Blog - Home
 {% endblock %}
 
 
@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container box_1620">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <a class="navbar-brand logo_h" href="index.html"><img src="{%static 'css/img/logo.png'%}" alt=""></a>
+        <a class="navbar-brand logo_h" href="index.html"><img src="{%static 'css/img/logo.png'%}" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="icon-bar"></span>
@@ -66,7 +66,7 @@
         <div class="left" style="margin-right: 30px;">
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-              <img class="card-img rounded-0" src={{post.image_url}} alt="">
+              <img class="card-img rounded-0" src={{post.image_url}} alt="image">
             </div>
             <div class="blog__slide__content">
               <h3><a href="#">{{post.title}}</a></h3>
@@ -90,9 +90,9 @@
           <div class="single-recent-blog-post">
             <div class="thumb">
               {% if post.image_url %}
-              <img class="img-fluid" src={{post.image_url}} alt="">
+              <img class="img-fluid" src={{post.image_url}} alt="image">
               {% else %}
-              <img class="img-fluid" src="{% static 'css/img/banner/blog.png' %}" alt="">
+              <img class="img-fluid" src="{% static 'css/img/banner/blog.png' %}" alt="banner">
               {% endif %}
               <ul class="thumb-info" style="max-width: 550px;">
                 <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
@@ -104,13 +104,13 @@
               {% if post.title %}
               <h3>{{post.title}}.</h3>
               {% else %}
-              <img class="img-fluid" src="{%static 'css/img/banner/blog.png'%}" alt="">
+              <img class="img-fluid" src="{%static 'css/img/banner/blog.png'%}" alt="banner">
               {% endif %}
               {% if post.text %}
               <p>{{post.text|truncatechars:200}} </p>
 
               {% else %}
-              <img class="img-fluid" src="{%static 'css/img/banner/blog.png' %}" alt="">
+              <img class="img-fluid" src="{%static 'css/img/banner/blog.png' %}" alt="banner">
               {% endif %}
 
 
