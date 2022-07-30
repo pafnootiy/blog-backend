@@ -69,7 +69,7 @@
               <img class="card-img rounded-0" src={{post.image_url}} alt="image">
             </div>
             <div class="blog__slide__content">
-              <h3><a href="#">{{post.title}}</a></h3>
+              <h3><a href="{% url 'index' %}post/{{post.slug}}">{{post.title}}</a></h3>
               <p>{{post.published_at}}</p>
             </div>
           </div>
