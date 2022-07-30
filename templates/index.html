@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-Sensive Blog - Home
+  Sensive Blog - Home
 {% endblock %}
 
 
@@ -92,25 +92,25 @@ Sensive Blog - Home
               {% if post.image_url %}
               <img class="img-fluid" src={{post.image_url}} alt="image">
               {% else %}
-              <img class="img-fluid" src="{% static 'css/img/banner/blog.png' %}" alt="banner">
+                <img class="img-fluid" src="{% static 'css/img/banner/blog.png' %}" alt="banner">
               {% endif %}
               <ul class="thumb-info" style="max-width: 550px;">
                 <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
                 <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-                <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}}</a></li>
+                <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments</a></li>
               </ul>
             </div>
             <div class="details mt-20">
               {% if post.title %}
-              <h3>{{post.title}}.</h3>
+                <h3>{{post.title}}.</h3>
               {% else %}
-              <img class="img-fluid" src="{%static 'css/img/banner/blog.png'%}" alt="banner">
+               <img class="img-fluid" src="{%static 'css/img/banner/blog.png'%}" alt="banner">
               {% endif %}
               {% if post.text %}
               <p>{{post.text|truncatechars:200}} </p>
 
               {% else %}
-              <img class="img-fluid" src="{%static 'css/img/banner/blog.png' %}" alt="banner">
+               <img class="img-fluid" src="{%static 'css/img/banner/blog.png' %}" alt="banner">
               {% endif %}
 
 
@@ -176,80 +176,7 @@ Sensive Blog - Home
 </main>
 
 <!--================ Start Footer Area =================-->
-<footer class="footer-area section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3  col-md-6 col-sm-6">
-        <div class="single-footer-widget">
-          <h6>About Us</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-            magna aliqua.
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-4  col-md-6 col-sm-6">
-        <div class="single-footer-widget">
-          <h6>Newsletter</h6>
-          <p>Stay update with our latest</p>
-          <div class="" id="mc_embed_signup">
 
-            <form target="_blank" novalidate
-                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                  method="get" class="form-inline">
-
-              <div class="d-flex flex-row">
-
-                <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
-                       onblur="this.placeholder = 'Enter Email '"
-                       required="" type="email">
-
-
-                <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
-                <div style="position: absolute; left: -5000px;">
-                  <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                </div>
-
-              </div>
-              <div class="info"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3  col-md-6 col-sm-6">
-      </div>
-      <div class="col-lg-2 col-md-6 col-sm-6">
-        <div class="single-footer-widget">
-          <h6>Follow Us</h6>
-          <p>Let us be social</p>
-          <div class="footer-social d-flex align-items-center">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-dribbble"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-behance"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-      <p class="footer-text m-0">
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-        All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
-        href="https://colorlib.com" target="_blank">Colorlib</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
-    </div>
-  </div>
-</footer>
 <!--================ End Footer Area =================-->
 
 <script src="{% static 'css/js/scripts.js' %}"></script>
