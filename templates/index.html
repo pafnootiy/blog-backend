@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container box_1620">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <a class="navbar-brand logo_h" href="index.html"><img src="{%static 'css/img/logo.png'%}" alt="logo"></a>
+        <a class="navbar-brand logo_h" href="index.html"><img src="{%static 'img/logo.png'%}" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="icon-bar"></span>
@@ -92,7 +92,7 @@
               {% if post.image_url %}
               <img class="img-fluid" src={{post.image_url}} alt="image">
               {% else %}
-                <img class="img-fluid" src="{% static 'css/img/banner/blog.png' %}" alt="banner">
+                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="banner">
               {% endif %}
               <ul class="thumb-info" style="max-width: 550px;">
                 <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
@@ -104,13 +104,13 @@
               {% if post.title %}
                 <h3>{{post.title}}.</h3>
               {% else %}
-               <img class="img-fluid" src="{%static 'css/img/banner/blog.png'%}" alt="banner">
+               <img class="img-fluid" src="{%static 'img/banner/blog.png'%}" alt="banner">
               {% endif %}
               {% if post.text %}
               <p>{{post.text|truncatechars:200}} </p>
 
               {% else %}
-               <img class="img-fluid" src="{%static 'css/img/banner/blog.png' %}" alt="banner">
+               <img class="img-fluid" src="{%static 'img/banner/blog.png' %}" alt="banner">
               {% endif %}
 
 
@@ -179,7 +179,7 @@
 
 <!--================ End Footer Area =================-->
 
-<script src="{% static 'css/js/scripts.js' %}"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
 </body>
 {% endblock %}
 
