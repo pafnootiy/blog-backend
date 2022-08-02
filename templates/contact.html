@@ -6,128 +6,98 @@
   Remake Barber - Contact
 {% endblock %}
 
-
 {% block content %}
-  <!--================Header Menu Area =================-->
-  <header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container box_1620">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{%static 'img/logo.png'%}" alt="logo"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item"><a class="nav-link" style="color: #3a414e;" href="{% url 'index' %}">Home</a></li>
-              <li class="nav-item active"><a class="nav-link" style="color: #3a414e;" href="{% url 'index' %}contact">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right navbar-social">
-              <li><a href="#"><i class="ti-facebook"></i></a></li>
-              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li><a href="#"><i class="ti-instagram"></i></a></li>
-              <li><a href="#"><i class="ti-skype"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!--================Header Menu Area =================-->
-
-  <!--================ Hero sm banner start =================-->
-  <section class="mb-30px">
-    <div class="container">
-      <div class="hero-banner hero-banner--sm">
-        <div class="hero-banner__content">
-          <h1>Contact Us</h1>
-          <nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-            </ol>
-          </nav>
-        </div>
+<!--================Header Menu Area =================-->
+<!--================Header Menu Area =================-->
+<!--================ Hero sm banner start =================-->
+<section class="mb-30px">
+  <div class="container">
+    <div class="hero-banner hero-banner--sm">
+      <div class="hero-banner__content">
+        <h1>Contact Us</h1>
+        <nav aria-label="breadcrumb" class="banner-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+          </ol>
+        </nav>
       </div>
     </div>
-  </section>
-  <!--================ Hero sm banner end =================-->
+  </div>
+</section>
+<!--================ Hero sm banner end =================-->
 
 
-  <!-- ================ contact section start ================= -->
-  <section class="section-margin--small section-margin">
-    <div class="container">
-      <div class="d-none d-sm-block mb-5 pb-4">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d001c2610bb142db5d803deff2258a6093d69c22d86e555f5ae566bbc6f00cd&amp;width=1012&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
-      </div>
+<!-- ================ contact section start ================= -->
+<section class="section-margin--small section-margin">
+  <div class="container">
+    <div class="d-none d-sm-block mb-5 pb-4">
+      <script type="text/javascript" charset="utf-8" async
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d001c2610bb142db5d803deff2258a6093d69c22d86e555f5ae566bbc6f00cd&amp;width=1012&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
 
 
-      <div class="row">
-        <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-home"></i></span>
-            <div class="media-body">
-              <h3>California United States</h3>
-              <p>Santa monica bullevard</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-headphone"></i></span>
-            <div class="media-body">
-              <h3><a href="tel:454545654">00 (440) 9865 562</a></h3>
-              <p>Mon to Fri 9am to 6pm</p>
-            </div>
-          </div>
-          <div class="media contact-info">
-            <span class="contact-info__icon"><i class="ti-email"></i></span>
-            <div class="media-body">
-              <h3><a href="mailto:support@colorlib.com">support@colorlib.com</a></h3>
-              <p>Send us your query anytime!</p>
-            </div>
+    <div class="row">
+      <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-home"></i></span>
+          <div class="media-body">
+            <h3>California United States</h3>
+            <p>Santa monica bullevard</p>
           </div>
         </div>
-        <div class="col-md-8 col-lg-9">
-          <form action="./" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">
-            <div class="row">
-              <div class="col-lg-5">
-                <div class="form-group">
-                  <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" name="email" id="email" type="email" placeholder="Enter email address">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter Subject">
-                </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-headphone"></i></span>
+          <div class="media-body">
+            <h3><a href="tel:454545654">00 (440) 9865 562</a></h3>
+            <p>Mon to Fri 9am to 6pm</p>
+          </div>
+        </div>
+        <div class="media contact-info">
+          <span class="contact-info__icon"><i class="ti-email"></i></span>
+          <div class="media-body">
+            <h3><a href="mailto:support@colorlib.com">support@colorlib.com</a></h3>
+            <p>Send us your query anytime!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <form action="./" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="form-group">
+                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name">
               </div>
-              <div class="col-lg-7">
-                <div class="form-group">
-                    <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="5" placeholder="Enter Message"></textarea>
-                </div>
+              <div class="form-group">
+                <input class="form-control" name="email" id="email" type="email" placeholder="Enter email address">
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter Subject">
               </div>
             </div>
-            <div class="form-group text-center text-md-right mt-3">
-              <button type="submit" class="button button--active button-contactForm">Send Message</button>
+            <div class="col-lg-7">
+              <div class="form-group">
+                <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="5"
+                          placeholder="Enter Message"></textarea>
+              </div>
             </div>
-          </form>
-        </div>
+          </div>
+          <div class="form-group text-center text-md-right mt-3">
+            <button type="submit" class="button button--active button-contactForm">Send Message</button>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
-	<!-- ================ contact section end ================= -->
+  </div>
+</section>
+<!-- ================ contact section end ================= -->
 
 
+<!--================ Start Footer Area =================-->
 
+<!--================ End Footer Area =================-->
 
-  <!--================ Start Footer Area =================-->
-
-  <!--================ End Footer Area =================-->
-
-  <script src="{%static 'js/scripts.js' %}"></script>
+<script src="{%static 'js/scripts.js' %}"></script>
 </body>
 {% endblock %}
 </html>

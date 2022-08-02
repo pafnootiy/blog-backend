@@ -6,42 +6,9 @@
   Sensive Blog - Home
 {% endblock %}
 
-
 {% block content %}
 <!--================Header Menu Area =================-->
-<header class="header_area">
-  <div class="main_menu">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container box_1620">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <a class="navbar-brand logo_h" href="index.html"><img src="{%static 'img/logo.png'%}" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-          <ul class="nav navbar-nav menu_nav justify-content-center">
-            <li class="nav-item active"><a class="nav-link" style="color: #3a414e;" href="{% url 'index' %}">Home</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" style="color: #3a414e;"
-                                    href="{% url 'index' %}contact ">Contact</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right navbar-social">
-            <li><a href="#"><i class="ti-facebook"></i></a></li>
-            <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-            <li><a href="#"><i class="ti-instagram"></i></a></li>
-            <li><a href="#"><i class="ti-skype"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
 <!--================Header Menu Area =================-->
-
 <main class="site-main">
   <!--================Hero Banner start =================-->
   <section class="mb-30px">
@@ -176,7 +143,6 @@
 </main>
 
 <!--================ Start Footer Area =================-->
-
 <!--================ End Footer Area =================-->
 
 <script src="{% static 'js/scripts.js' %}"></script>
