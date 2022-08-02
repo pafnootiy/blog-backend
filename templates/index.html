@@ -57,7 +57,7 @@
           <div class="single-recent-blog-post">
             <div class="thumb">
               {% if post.image_url %}
-              <img class="img-fluid" src={{post.image_url}} alt="image">
+                <img class="img-fluid" src={{post.image_url}} alt="image">
               {% else %}
                 <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="banner">
               {% endif %}
@@ -71,13 +71,12 @@
               {% if post.title %}
                 <h3>{{post.title}}.</h3>
               {% else %}
-               <img class="img-fluid" src="{%static 'img/banner/blog.png'%}" alt="banner">
+                <img class="img-fluid" src="{%static 'img/banner/blog.png'%}" alt="banner">
               {% endif %}
               {% if post.text %}
-              <p>{{post.text|truncatechars:200}} </p>
-
+                <p>{{post.text|truncatechars:200}} </p>
               {% else %}
-               <img class="img-fluid" src="{%static 'img/banner/blog.png' %}" alt="banner">
+                <img class="img-fluid" src="{%static 'img/banner/blog.png' %}" alt="banner">
               {% endif %}
 
 
