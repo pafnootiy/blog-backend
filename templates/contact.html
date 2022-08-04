@@ -10,7 +10,7 @@
 <!--================Header Menu Area =================-->
 <!--================Header Menu Area =================-->
 <!--================ Hero sm banner start =================-->
-  <section class="mb-30px">
+<section class="mb-30px">
   <div class="container">
     <div class="hero-banner hero-banner--sm">
       <div class="hero-banner__content">
@@ -18,22 +18,23 @@
         <nav aria-label="breadcrumb" class="banner-breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+            <li aria-current="page" class="breadcrumb-item active">Contact Us</li>
           </ol>
         </nav>
       </div>
     </div>
   </div>
-  </section>
+</section>
 <!--================ Hero sm banner end =================-->
 
 
 <!-- ================ contact section start ================= -->
-  <section class="section-margin--small section-margin">
+<section class="section-margin--small section-margin">
   <div class="container">
     <div class="d-none d-sm-block mb-5 pb-4">
-      <script type="text/javascript" charset="utf-8" async
-              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d001c2610bb142db5d803deff2258a6093d69c22d86e555f5ae566bbc6f00cd&amp;width=1012&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+      <script async charset="utf-8"
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d001c2610bb142db5d803deff2258a6093d69c22d86e555f5ae566bbc6f00cd&amp;width=1012&amp;height=720&amp;lang=ru_RU&amp;scroll=true"
+              type="text/javascript"></script>
     </div>
 
 
@@ -62,34 +63,35 @@
         </div>
       </div>
       <div class="col-md-8 col-lg-9">
-        <form action="./" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">
+        <form action="./" class="form-contact contact_form" id="contactForm" method="post" novalidate="novalidate">
           <div class="row">
             <div class="col-lg-5">
               <div class="form-group">
-                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name">
+                <input class="form-control" id="name" name="name" placeholder="Enter your name" type="text">
               </div>
               <div class="form-group">
-                <input class="form-control" name="email" id="email" type="email" placeholder="Enter email address">
+                <input class="form-control" id="email" name="email" placeholder="Enter email address" type="email">
               </div>
               <div class="form-group">
-                <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter Subject">
+                <input class="form-control" id="subject" name="subject" placeholder="Enter Subject" type="text">
               </div>
             </div>
             <div class="col-lg-7">
               <div class="form-group">
-                <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="5"
-                          placeholder="Enter Message"></textarea>
+                <textarea class="form-control different-control w-100" cols="30" id="message" name="message"
+                          placeholder="Enter Message"
+                          rows="5"></textarea>
               </div>
             </div>
           </div>
           <div class="form-group text-center text-md-right mt-3">
-            <button type="submit" class="button button--active button-contactForm">Send Message</button>
+            <button class="button button--active button-contactForm" type="submit">Send Message</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  </section>
+</section>
 <!-- ================ contact section end ================= -->
 {% endblock %}
 
