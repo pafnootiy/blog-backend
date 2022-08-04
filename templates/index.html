@@ -7,140 +7,141 @@
 {% endblock %}
 
 {% block content %}
-<!--================Header Menu Area =================-->
-<!--================Header Menu Area =================-->
-<main class="site-main">
-  <!--================Hero Banner start =================-->
-  <section class="mb-30px">
-    <div class="container">
-      <div class="hero-banner">
-        <div class="hero-banner__content">
-          <h3>Tours &amp; Travels</h3>
-          <h1>Amazing Places on earth</h1>
-          <h4>December 12, 2018</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================Hero Banner end =================-->
-
-  <!--================ Blog slider start =================-->
-
-  <section>
-    <div class="container">
-      <div class="d-flex">
-        {% for post in most_popular_posts %}
-        <div class="left" style="margin-right: 30px;">
-          <div class="card blog__slide text-center">
-            <div class="blog__slide__img">
-              <img alt="image" class="card-img rounded-0" src={{post.image_url}}>
-            </div>
-            <div class="blog__slide__content">
-              <h3><a href="{% url 'index' %}post/{{post.slug}}">{{post.title}}</a></h3>
-              <p>{{post.published_at}}</p>
-            </div>
+  <!--================Header Menu Area =================-->
+  <!--================Header Menu Area =================-->
+  <main class="site-main">
+    <!--================Hero Banner start =================-->
+    <section class="mb-30px">
+      <div class="container">
+        <div class="hero-banner">
+          <div class="hero-banner__content">
+            <h3>Tours &amp; Travels</h3>
+            <h1>Amazing Places on earth</h1>
+            <h4>December 12, 2018</h4>
           </div>
         </div>
-        {% endfor %}
       </div>
-    </div>
-  </section>
+    </section>
+    <!--================Hero Banner end =================-->
 
-  <!--================ Blog slider end =================-->
+    <!--================ Blog slider start =================-->
 
-  <!--================ Start Blog Post Area =================-->
-  <section class="blog-post-area section-margin mt-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          {% for post in fresh_posts %}
-            <div class="single-recent-blog-post">
-            <div class="thumb">
-              {% if post.image_url %}
-                <img alt="image" class="img-fluid" src={{post.image_url}}>
-              {% else %}
-                <img alt="banner" class="img-fluid" src="{% static 'img/banner/blog.png' %}">
-              {% endif %}
-              <ul class="thumb-info" style="max-width: 550px;">
-                <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
-                <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
-                <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments</a></li>
-              </ul>
+    <section>
+      <div class="container">
+        <div class="d-flex">
+          {% for post in most_popular_posts %}
+            <div class="card blog__slide text-center">
+              <div class="blog__slide__img">
+                <img alt="image" class="card-img rounded-0" src={{post.image_url}}>
+              </div>
+              <div class="blog__slide__content">
+                <h3><a href="{% url 'index' %}post/{{post.slug}}">{{post.title}}</a></h3>
+                <p>{{post.published_at}}</p>
+              </div>
             </div>
-            <div class="details mt-20">
-              {% if post.title %}
-                <h3>{{post.title}}.</h3>
-              {% else %}
-                <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png'%}">
-              {% endif %}
-              {% if post.text %}
-                <p>{{post.text|truncatechars:200}} </p>
-              {% else %}
-                <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png' %}">
-              {% endif %}
+         {% endfor %}
+        </div>
+      </div>
+      </div>
+    </section>
 
+    <!--================ Blog slider end =================-->
 
-              <a class="button" href="{% url 'index' %}post/{{post.slug}}"> Read More <i class="ti-arrow-right"></i></a><br>
-
-            </div>
-          </div>
-          {% endfor %}
-
-
+    <!--================ Start Blog Post Area =================-->
+    <div class="left" style="margin-right: 30px;">
+      <section class="blog-post-area section-margin mt-4">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-12">
-              <nav class="blog-pagination justify-content-center d-flex">
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a aria-label="Previous" class="page-link" href="#">
-                                  <span aria-hidden="true">
-                                      <i class="ti-angle-left"></i>
-                                  </span>
-                    </a>
-                  </li>
-                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item">
-                    <a aria-label="Next" class="page-link" href="#">
-                                  <span aria-hidden="true">
-                                      <i class="ti-angle-right"></i>
-                                  </span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
+            <div class="col-lg-8">
+              {% for post in fresh_posts %}
+                <div class="single-recent-blog-post">
+                  <div class="thumb">
+                    {% if post.image_url %}
+                      <img alt="image" class="img-fluid" src={{post.image_url}}>
+                    {% else %}
+                      <img alt="banner" class="img-fluid" src="{% static 'img/banner/blog.png' %}">
+                    {% endif %}
+                    <ul class="thumb-info" style="max-width: 550px;">
+                      <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
+                      <li><a href="#"><i class="ti-notepad"></i>{{post.published_at}}</a></li>
+                      <li><a href="#"><i class="ti-themify-favicon"></i>{{post.comments_amount}} Comments</a></li>
+                    </ul>
+                  </div>
+                  <div class="details mt-20">
+                    {% if post.title %}
+                      <h3>{{post.title}}.</h3>
+                    {% else %}
+                      <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png'%}">
+                    {% endif %}
+                    {% if post.text %}
+                      <p>{{post.text|truncatechars:200}} </p>
+                    {% else %}
+                      <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png' %}">
+                    {% endif %}
 
-        <!-- Start Blog Post Siddebar -->
-        <div class="col-lg-4 sidebar-widgets">
-          <div class="widget-wrap">
-            <div class="single-sidebar-widget newsletter-widget">
-              <h4 class="single-sidebar-widget__title">Newsletter</h4>
-              <div class="form-group mt-30">
-                <div class="col-autos">
-                  <input class="form-control" id="inlineFormInputGroup" onblur="this.placeholder = 'Enter email'"
-                         onfocus="this.placeholder = ''"
-                         placeholder="Enter email"
-                         type="text">
+
+                    <a class="button" href="{% url 'index' %}post/{{post.slug}}"> Read More <i
+                      class="ti-arrow-right"></i></a><br>
+
+                  </div>
+                </div>
+              {% endfor %}
+
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <nav class="blog-pagination justify-content-center d-flex">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a aria-label="Previous" class="page-link" href="#">
+                                    <span aria-hidden="true">
+                                        <i class="ti-angle-left"></i>
+                                    </span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item">
+                        <a aria-label="Next" class="page-link" href="#">
+                                    <span aria-hidden="true">
+                                        <i class="ti-angle-right"></i>
+                                    </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
-              <button class="bbtns d-block mt-20 w-100">Subcribe</button>
             </div>
 
+            <!-- Start Blog Post Siddebar -->
+            <div class="col-lg-4 sidebar-widgets">
+              <div class="widget-wrap">
+                <div class="single-sidebar-widget newsletter-widget">
+                  <h4 class="single-sidebar-widget__title">Newsletter</h4>
+                  <div class="form-group mt-30">
+                    <div class="col-autos">
+                      <input class="form-control" id="inlineFormInputGroup" onblur="this.placeholder = 'Enter email'"
+                             onfocus="this.placeholder = ''"
+                             placeholder="Enter email"
+                             type="text">
+                    </div>
+                  </div>
+                  <button class="bbtns d-block mt-20 w-100">Subcribe</button>
+                </div>
 
-            <div class="single-sidebar-widget post-category-widget">
-              <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
+
+                <div class="single-sidebar-widget post-category-widget">
+                  <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
+                </div>
+              </div>
             </div>
+            <!-- End Blog Post Siddebar -->
           </div>
         </div>
-        <!-- End Blog Post Siddebar -->
-      </div>
-    </div>
-  </section>
-  <!--================ End Blog Post Area =================-->
-</main>
+      </section>
+      <!--================ End Blog Post Area =================-->
+  </main>
 {% endblock %}
 <!--================ Start Footer Area =================-->
 <!--================ End Footer Area =================-->
