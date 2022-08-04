@@ -57,9 +57,9 @@
             <div class="single-recent-blog-post">
             <div class="thumb">
               {% if post.image_url %}
-              <img alt="image" class="img-fluid" src={{post.image_url}}>
+                <img alt="image" class="img-fluid" src={{post.image_url}}>
               {% else %}
-              <img alt="banner" class="img-fluid" src="{% static 'img/banner/blog.png' %}">
+                <img alt="banner" class="img-fluid" src="{% static 'img/banner/blog.png' %}">
               {% endif %}
               <ul class="thumb-info" style="max-width: 550px;">
                 <li><a href="#"><i class="ti-user"></i>{{post.author}}</a></li>
@@ -69,14 +69,14 @@
             </div>
             <div class="details mt-20">
               {% if post.title %}
-              <h3>{{post.title}}.</h3>
+                <h3>{{post.title}}.</h3>
               {% else %}
-              <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png'%}">
+                <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png'%}">
               {% endif %}
               {% if post.text %}
-              <p>{{post.text|truncatechars:200}} </p>
+                <p>{{post.text|truncatechars:200}} </p>
               {% else %}
-              <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png' %}">
+                <img alt="banner" class="img-fluid" src="{%static 'img/banner/blog.png' %}">
               {% endif %}
 
 
