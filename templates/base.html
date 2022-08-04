@@ -10,42 +10,41 @@
       {% endblock %}
     </title>
     <link href="{% static '/img/favicon.png' %}" rel="icon" type="image/png">
-
     <link href="{% static 'styles.min.css' %}" rel="stylesheet">
   </head>
-  <header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container box_1620">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html"><img alt="logo" src="{%static 'img/logo.png'%}"></a>
-          <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                  class="navbar-toggler"
-                  data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav justify-content-center">
-              <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}" style="color: #3a414e;">Home</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}contact "
-                                      style="color: #3a414e;">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right navbar-social">
-              <li><a href="#"><i class="ti-facebook"></i></a></li>
-              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-              <li><a href="#"><i class="ti-instagram"></i></a></li>
-              <li><a href="#"><i class="ti-skype"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
   <body>
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a class="navbar-brand logo_h" href="index.html"><img alt="logo" src="{%static 'img/logo.png'%}"></a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav justify-content-center">
+                <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}" style="color: #3a414e;">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}contact "
+                                        style="color: #3a414e;">Contact</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right navbar-social">
+                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
     {% block content %}
     {% endblock %}
